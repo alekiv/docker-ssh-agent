@@ -38,7 +38,7 @@ case "$1" in
   socat UNIX-LISTEN:${SSH_AUTH_PROXY_SOCK},perm=0666,fork UNIX-CONNECT:${SSH_AUTH_SOCK} &
 
   echo "Launching ssh-agent..."
-  exec /usr/bin/ssh-agent -a ${SSH_AUTH_SOCK} -d
+  exec /usr/bin/ssh-agent -a ${SSH_AUTH_SOCK} -d > ${SSH_SSH_AGENT_ENV}
   ;;
 
 	# Manage SSH identities

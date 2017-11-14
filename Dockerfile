@@ -37,6 +37,7 @@ COPY entry.sh /entry.sh
 ENV SOCKET_DIR /.ssh-agent
 ENV SSH_AUTH_SOCK ${SOCKET_DIR}/socket
 ENV SSH_AUTH_PROXY_SOCK ${SOCKET_DIR}/proxy-socket
+ENV SSH_SSH_AGENT_ENV ${SOCKET_DIR}/ssh-agent.env
 
 VOLUME ${SOCKET_DIR}
 
